@@ -182,17 +182,27 @@ export default function SriPortfolioWebsite() {
           </p>
 
           {app.android && (
-            <a href={app.android} target="_blank" rel="noreferrer">
-              Android
-            </a>
+            <p>
+    	      <b>Android App Link:</b>{" "}
+    	      <i>
+      		<a href={app.android} target="_blank" rel="noreferrer">
+                  {app.name}
+                </a>
+              </i>
+            </p>
           )}
 
           {app.ios && (
             <>
               {" | "}
-              <a href={app.ios} target="_blank" rel="noreferrer">
-                iOS
-              </a>
+              <p>
+                <b>iOS App Link:</b>{" "}
+                <i>
+                  <a href={app.ios} target="_blank" rel="noreferrer">
+                    {app.name}
+                  </a>
+                </i>
+              </p>
             </>
           )}
 
