@@ -5,7 +5,7 @@ export default function SriPortfolioWebsite() {
     subtitle:
       "Senior Software Engineer (Architect | Tech Lead | Developer) – Android & Flutter | IoT • AWS • BLE • CI/CD Automation | Architecting Scalable Mobile Experiences",
     summary:
-      "Senior Mobile Engineer with 12+ years of experience building large-scale mobile and IoT-connected applications, including 8+ years in Android and 4+ years in Flutter. Expertise in Jetpack Compose, Kotlin Coroutines, BLE, MQTT, WebSocket, AWS IoT, and scalable mobile architecture.",
+  "Senior Software Engineer with 12+ years of experience building large-scale mobile and IoT-connected applications, including 8+ years in Android (Kotlin/Java) and 4+ years in Flutter. Specialized in native Android (Kotlin, Coroutines, Jetpack Compose, Java) and cross-platform Flutter development, with deep expertise in the Android Application Framework and modern architectural patterns including MVC, MVP, MVVM, MVI, BLoC, and Clean Architecture.",
     email: "sriharshakunapuli@gmail.com",
     phone: "(858) 281-8478",
     location: "San Diego, CA, USA",
@@ -192,7 +192,6 @@ export default function SriPortfolioWebsite() {
 
         <h2 style={sectionTitleStyle}>Profiles</h2>
         <p style={paragraphStyle}>
-          <b>Profiles :</b>{" "}
           <a href={profile.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
           </a>{" "}
