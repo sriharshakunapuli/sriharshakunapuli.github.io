@@ -8,7 +8,7 @@ export default function SriPortfolioWebsite() {
       "Senior Mobile Engineer with 12+ years of experience building large-scale mobile and IoT-connected applications, including 8+ years in Android and 4+ years in Flutter. Expertise in Jetpack Compose, Kotlin Coroutines, BLE, MQTT, WebSocket, AWS IoT, and scalable mobile architecture.",
     email: "sriharshakunapuli@gmail.com",
     phone: "(858) 281-8478",
-    location: "California, USA",
+    location: "San Diego, CA, USA",
     linkedin: "https://www.linkedin.com/in/sri-harsha-kunapuli-9a3945154/",
     github: "https://github.com/sriharshakunapuli",
     resume: "#",
@@ -167,11 +167,11 @@ export default function SriPortfolioWebsite() {
   };
 
   const itemDescriptionStyle = {
-    fontSize: "17px",
-    lineHeight: "1.8",
+    fontSize: "16px",
+    lineHeight: "1.5",
     color: "#4b5563",
     textAlign: "left",
-    marginBottom: "8px",
+    marginBottom: "6px",
   };
 
   const linkLineStyle = {
@@ -209,25 +209,25 @@ export default function SriPortfolioWebsite() {
             <div style={itemDescriptionStyle}>{app.description}</div>
 
             {app.android && (
-              <p style={linkLineStyle}>
-                <b>Android App Link:</b>{" "}
-                <i>
-                  <a href={app.android} target="_blank" rel="noreferrer">
-                    {app.name}
-                  </a>
-                </i>
-              </p>
+              <div style={{fontSize:"16px", lineHeight:"1.5"}}>
+  		Android App Link:{" "}
+  		<i>
+    		  <a href={app.android} target="_blank" rel="noreferrer">
+      		    {app.name}
+    		  </a>
+  		</i>
+	      </div>
             )}
 
             {app.ios && (
-              <p style={linkLineStyle}>
-                <b>iOS App Link:</b>{" "}
-                <i>
-                  <a href={app.ios} target="_blank" rel="noreferrer">
-                    {app.name}
-                  </a>
-                </i>
-              </p>
+              <div style={{fontSize:"16px", lineHeight:"1.5"}}>
+  		iOS App Link:{" "}
+  		<i>
+    		  <a href={app.ios} target="_blank" rel="noreferrer">
+      		    {app.name}
+    		  </a>
+  		</i>
+	      </div>
             )}
           </div>
         ))}
@@ -247,15 +247,11 @@ export default function SriPortfolioWebsite() {
         <p style={paragraphStyle}>{skills.join(" • ")}</p>
 
         <h2 style={sectionTitleStyle}>Contact</h2>
-        <p style={paragraphStyle}>
-          <b>Email:</b> {profile.email}
-        </p>
-        <p style={paragraphStyle}>
-          <b>Phone:</b> {profile.phone}
-        </p>
-        <p style={paragraphStyle}>
-          <b>Location:</b> {profile.location}
-        </p>
+        <div style={{fontSize:"16px", lineHeight:"1.6"}}>
+          <div>Email: {profile.email}</div>
+	  <div>Phone: {profile.phone}</div>
+	  <div>Phone: {profile.location}</div>
+        </div>
       </div>
     </div>
   );
