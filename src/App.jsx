@@ -1,9 +1,9 @@
 export default function SriPortfolioWebsite() {
-
   const profile = {
     name: "Sri Harsha Kunapuli",
     title: "Senior Mobile Engineer",
-    subtitle: "Android • Flutter • IoT • AOSP",
+    subtitle:
+      "Senior Software Engineer (Architect | Tech Lead | Developer) – Android & Flutter | IoT • AWS • BLE • CI/CD Automation | Architecting Scalable Mobile Experiences",
     summary:
       "Senior Mobile Engineer with 12+ years of experience building large-scale mobile and IoT-connected applications, including 8+ years in Android and 4+ years in Flutter. Expertise in Jetpack Compose, Kotlin Coroutines, BLE, MQTT, WebSocket, AWS IoT, and scalable mobile architecture.",
     email: "sriharshakunapuli@gmail.com",
@@ -15,25 +15,22 @@ export default function SriPortfolioWebsite() {
   };
 
   const publishedApps = [
-
     {
       name: "Fluidra Pro",
       platform: "Android / iOS",
       description:
         "Professional IoT mobile platform enabling service technicians to configure, monitor, and control connected pool equipment.",
       android: "https://play.google.com/store/apps/details?id=com.zodiac.fluidrapro",
-      ios: "https://apps.apple.com/us/app/fluidra-pro/id1538621105"
+      ios: "https://apps.apple.com/us/app/fluidra-pro/id1538621105",
     },
-
     {
       name: "iAquaLink",
       platform: "Android / iOS",
       description:
         "Consumer IoT application allowing pool owners to remotely monitor and control pool equipment and automation systems.",
       android: "https://play.google.com/store/apps/details?id=com.zodiac.iaqualink",
-      ios: "https://apps.apple.com/us/app/iaqualink/id443059509"
+      ios: "https://apps.apple.com/us/app/iaqualink/id443059509",
     },
-
     {
       name: "AT&T TV",
       platform: "Android",
@@ -41,7 +38,6 @@ export default function SriPortfolioWebsite() {
         "Large-scale streaming platform delivering live television, DVR playback, and on-demand video experiences.",
       android: "https://play.google.com/store/apps/details?id=com.att.tv",
     },
-
     {
       name: "DirecTV",
       platform: "Android",
@@ -49,7 +45,6 @@ export default function SriPortfolioWebsite() {
         "Mobile streaming and remote DVR management platform supporting millions of users across DirecTV services.",
       android: "https://play.google.com/store/apps/details?id=com.directv.navigator",
     },
-
     {
       name: "Best Brains Learning",
       platform: "Android",
@@ -57,19 +52,16 @@ export default function SriPortfolioWebsite() {
         "Educational mobile application enabling learning programs and progress tracking for students.",
       android: "https://play.google.com/store/apps/details?id=com.edu.bestbrains",
     },
-
     {
       name: "Media Review & Promotions",
       platform: "Android",
       description:
         "Mobile review and rating platform enabling users to share feedback and discover local businesses.",
       android: "https://play.google.com/store/apps/details?id=com.review.legend",
-    }
-
+    },
   ];
 
   const projects = [
-
     {
       name: "Jetpack Compose Modernization",
       description:
@@ -77,7 +69,6 @@ export default function SriPortfolioWebsite() {
       stack: "Kotlin • Jetpack Compose • Coroutines • Flow • MVVM",
       link: "#",
     },
-
     {
       name: "IoT Device Control Platform",
       description:
@@ -85,7 +76,6 @@ export default function SriPortfolioWebsite() {
       stack: "Android • Flutter • BLE • MQTT • AWS IoT • WebSocket",
       link: "#",
     },
-
     {
       name: "Flutter Scalable Architecture",
       description:
@@ -93,15 +83,13 @@ export default function SriPortfolioWebsite() {
       stack: "Flutter • Dart • BLoC • Provider • GitHub Actions • Fastlane",
       link: "#",
     },
-
     {
       name: "AOSP In-Vehicle Infotainment",
       description:
         "Android Automotive media platform integrating satellite radio, streaming services, and vehicle HAL/AIDL interfaces.",
       stack: "Android • AOSP • AIDL • HAL • Kotlin",
       link: "#",
-    }
-
+    },
   ];
 
   const skills = [
@@ -120,82 +108,119 @@ export default function SriPortfolioWebsite() {
     "AOSP, AIDL / HAL",
     "CI/CD: GitHub Actions / Jenkins / Fastlane",
     "GitHub Copilot / Android Studio Gemini",
-    "JUnit, Mockito, Espresso, Appium, JaCoCo, LCOV"
+    "JUnit / Mockito / Espresso / Appium / JaCoCo / LCOV",
   ];
 
+  const pageStyle = {
+    fontFamily: "Arial, sans-serif",
+    backgroundColor: "#f8fafc",
+    padding: "32px",
+  };
+
+  const containerStyle = {
+    maxWidth: "1000px",
+    margin: "0 auto",
+    backgroundColor: "#ffffff",
+    padding: "40px 48px",
+    borderRadius: "10px",
+    boxShadow: "0 4px 18px rgba(0,0,0,0.08)",
+    textAlign: "left",
+  };
+
+  const nameStyle = {
+    fontSize: "40px",
+    fontWeight: "700",
+    marginBottom: "8px",
+    textAlign: "left",
+  };
+
+  const subtitleStyle = {
+    fontSize: "18px",
+    fontWeight: "600",
+    color: "#374151",
+    lineHeight: "1.6",
+    marginBottom: "24px",
+    textAlign: "left",
+  };
+
+  const sectionTitleStyle = {
+    fontSize: "28px",
+    fontWeight: "700",
+    marginTop: "28px",
+    marginBottom: "12px",
+    textAlign: "left",
+  };
+
+  const paragraphStyle = {
+    fontSize: "18px",
+    lineHeight: "1.8",
+    color: "#374151",
+    textAlign: "left",
+    marginBottom: "14px",
+  };
+
+  const itemTitleStyle = {
+    fontSize: "20px",
+    fontWeight: "700",
+    marginBottom: "6px",
+    textAlign: "left",
+  };
+
+  const itemDescriptionStyle = {
+    fontSize: "17px",
+    lineHeight: "1.8",
+    color: "#4b5563",
+    textAlign: "left",
+    marginBottom: "8px",
+  };
+
+  const linkLineStyle = {
+    fontSize: "17px",
+    lineHeight: "1.8",
+    textAlign: "left",
+    marginBottom: "8px",
+  };
+
   return (
-    <div style={{
-      fontFamily: "Inter, Arial",
-      background:"#f8fafc",
-      padding:"40px"
-    }}>
+    <div style={pageStyle}>
+      <div style={containerStyle}>
+        <h1 style={nameStyle}>{profile.name}</h1>
 
-    <div style={{
-      maxWidth:"900px",
-      margin:"auto",
-      background:"white",
-      padding:"40px",
-      borderRadius:"12px",
-      boxShadow:"0 8px 30px rgba(0,0,0,0.08)"
-    }}>
+        <div style={subtitleStyle}>{profile.subtitle}</div>
 
-      <h1 style={{fontSize:"38px", marginBottom:"6px"}}>
-        {profile.name}
-      </h1>
+        <p style={paragraphStyle}>{profile.summary}</p>
 
-      <p style={{color:"#555", marginBottom:"20px"}}>
-        {profile.title} — {profile.subtitle}
-      </p>
+        <h2 style={sectionTitleStyle}>Profiles</h2>
+        <p style={paragraphStyle}>
+          <b>Profiles :</b>{" "}
+          <a href={profile.linkedin} target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>{" "}
+          |{" "}
+          <a href={profile.github} target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+        </p>
 
-      <p style={{lineHeight:"1.6"}}>
-        {profile.summary}
-      </p>
+        <h2 style={sectionTitleStyle}>Published Mobile Applications</h2>
+        {publishedApps.map((app) => (
+          <div key={app.name} style={{ marginBottom: "20px" }}>
+            <div style={itemTitleStyle}>{app.name}</div>
+            <div style={itemDescriptionStyle}>{app.description}</div>
 
-      <hr style={{margin:"30px 0"}} />
+            {app.android && (
+              <p style={linkLineStyle}>
+                <b>Android App Link:</b>{" "}
+                <i>
+                  <a href={app.android} target="_blank" rel="noreferrer">
+                    {app.name}
+                  </a>
+                </i>
+              </p>
+            )}
 
-      <h2>Profiles</h2>
-
-      <p>
-        <a href={profile.linkedin} target="_blank" rel="noreferrer">
-          LinkedIn
-        </a>{" | "}
-        <a href={profile.github} target="_blank" rel="noreferrer">
-          GitHub
-        </a>
-      </p>
-
-      <hr style={{margin:"30px 0"}} />
-
-      <h2>Published Mobile Applications</h2>
-
-      {publishedApps.map(app => (
-        <div key={app.name} style={{
-          marginBottom:"20px",
-          paddingBottom:"15px",
-          borderBottom:"1px solid #eee"
-        }}>
-
-          <b>{app.name}</b> ({app.platform})
-
-          <p style={{margin:"6px 0"}}>
-            {app.description}
-          </p>
-
-          {app.android && (
-            <p>
-    	      <b>Android App Link:</b>{" "}
-    	      <i>
-      		<a href={app.android} target="_blank" rel="noreferrer">
-                  {app.name}
-                </a>
-              </i>
-            </p>
-          )}
-
-          {app.ios && (
-            <>
-              {" | "}
-              <p>
+            {app.ios && (
+              <p style={linkLineStyle}>
                 <b>iOS App Link:</b>{" "}
                 <i>
                   <a href={app.ios} target="_blank" rel="noreferrer">
@@ -203,52 +228,35 @@ export default function SriPortfolioWebsite() {
                   </a>
                 </i>
               </p>
-            </>
-          )}
+            )}
+          </div>
+        ))}
 
-        </div>
-      ))}
+        <h2 style={sectionTitleStyle}>Featured Engineering Projects</h2>
+        {projects.map((project) => (
+          <div key={project.name} style={{ marginBottom: "20px" }}>
+            <div style={itemTitleStyle}>{project.name}</div>
+            <div style={itemDescriptionStyle}>{project.description}</div>
+            <p style={linkLineStyle}>
+              <i>{project.stack}</i>
+            </p>
+          </div>
+        ))}
 
-      <hr style={{margin:"30px 0"}} />
+        <h2 style={sectionTitleStyle}>Core Skills</h2>
+        <p style={paragraphStyle}>{skills.join(" • ")}</p>
 
-      <h2>Featured Engineering Projects</h2>
-
-      {projects.map(project => (
-        <div key={project.name} style={{marginBottom:"18px"}}>
-
-          <b>{project.name}</b>
-
-          <p style={{margin:"4px 0"}}>
-            {project.description}
-          </p>
-
-          <p style={{
-            fontSize:"14px",
-            color:"#666"
-          }}>
-            {project.stack}
-          </p>
-
-        </div>
-      ))}
-
-      <hr style={{margin:"30px 0"}} />
-
-      <h2>Core Skills</h2>
-
-      <p style={{lineHeight:"1.7"}}>
-        {skills.join(" • ")}
-      </p>
-
-      <hr style={{margin:"30px 0"}} />
-
-      <h2>Contact</h2>
-
-      <p>Email: {profile.email}</p>
-      <p>Phone: {profile.phone}</p>
-      <p>Location: {profile.location}</p>
-
+        <h2 style={sectionTitleStyle}>Contact</h2>
+        <p style={paragraphStyle}>
+          <b>Email:</b> {profile.email}
+        </p>
+        <p style={paragraphStyle}>
+          <b>Phone:</b> {profile.phone}
+        </p>
+        <p style={paragraphStyle}>
+          <b>Location:</b> {profile.location}
+        </p>
+      </div>
     </div>
-  </div>
-);
+  );
 }
