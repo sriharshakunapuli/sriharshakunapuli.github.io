@@ -124,69 +124,121 @@ export default function SriPortfolioWebsite() {
   ];
 
   return (
-    <div style={{fontFamily:"Arial", padding:"40px", maxWidth:"1100px", margin:"auto"}}>
+    <div style={{
+      fontFamily: "Inter, Arial",
+      background:"#f8fafc",
+      padding:"40px"
+    }}>
 
-      <h1>{profile.name}</h1>
-      <h3>{profile.title} — {profile.subtitle}</h3>
+    <div style={{
+      maxWidth:"900px",
+      margin:"auto",
+      background:"white",
+      padding:"40px",
+      borderRadius:"12px",
+      boxShadow:"0 8px 30px rgba(0,0,0,0.08)"
+    }}>
 
-      <p>{profile.summary}</p>
+      <h1 style={{fontSize:"38px", marginBottom:"6px"}}>
+        {profile.name}
+      </h1>
+
+      <p style={{color:"#555", marginBottom:"20px"}}>
+        {profile.title} — {profile.subtitle}
+      </p>
+
+      <p style={{lineHeight:"1.6"}}>
+        {profile.summary}
+      </p>
+
+      <hr style={{margin:"30px 0"}} />
 
       <h2>Profiles</h2>
 
-      <ul>
-        <li>
-          <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-        </li>
-        <li>
-          <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
-        </li>
-      </ul>
+      <p>
+        <a href={profile.linkedin} target="_blank" rel="noreferrer">
+          LinkedIn
+        </a>{" | "}
+        <a href={profile.github} target="_blank" rel="noreferrer">
+          GitHub
+        </a>
+      </p>
+
+      <hr style={{margin:"30px 0"}} />
 
       <h2>Published Mobile Applications</h2>
 
-      <ul>
-        {publishedApps.map(app => (
-          <li key={app.name}>
-            <b>{app.name}</b> ({app.platform}) — {app.description}
-            <br/>
-            {app.android && (
-              <>
-                {" "}
-                <a href={app.android} target="_blank" rel="noreferrer">Android</a>
-              </>
-            )}
+      {publishedApps.map(app => (
+        <div key={app.name} style={{
+          marginBottom:"20px",
+          paddingBottom:"15px",
+          borderBottom:"1px solid #eee"
+        }}>
 
-            {app.ios && (
-              <>
-                {" | "}
-                <a href={app.ios} target="_blank" rel="noreferrer">iOS</a>
-              </>
-            )}
-          </li>
-        ))}
-      </ul>
+          <b>{app.name}</b> ({app.platform})
+
+          <p style={{margin:"6px 0"}}>
+            {app.description}
+          </p>
+
+          {app.android && (
+            <a href={app.android} target="_blank" rel="noreferrer">
+              Android
+            </a>
+          )}
+
+          {app.ios && (
+            <>
+              {" | "}
+              <a href={app.ios} target="_blank" rel="noreferrer">
+                iOS
+              </a>
+            </>
+          )}
+
+        </div>
+      ))}
+
+      <hr style={{margin:"30px 0"}} />
 
       <h2>Featured Engineering Projects</h2>
 
-      <ul>
-        {projects.map(project => (
-          <li key={project.name}>
-            <b>{project.name}</b> — {project.description}
-            <br/>
-            <i>{project.stack}</i>
-          </li>
-        ))}
-      </ul>
+      {projects.map(project => (
+        <div key={project.name} style={{marginBottom:"18px"}}>
+
+          <b>{project.name}</b>
+
+          <p style={{margin:"4px 0"}}>
+            {project.description}
+          </p>
+
+          <p style={{
+            fontSize:"14px",
+            color:"#666"
+          }}>
+            {project.stack}
+          </p>
+
+        </div>
+      ))}
+
+      <hr style={{margin:"30px 0"}} />
 
       <h2>Core Skills</h2>
 
-      <p>{skills.join(" • ")}</p>
+      <p style={{lineHeight:"1.7"}}>
+        {skills.join(" • ")}
+      </p>
+
+      <hr style={{margin:"30px 0"}} />
 
       <h2>Contact</h2>
 
       <p>Email: {profile.email}</p>
+      <p>Phone: {profile.phone}</p>
       <p>Location: {profile.location}</p>
 
     </div>
-  );
+  </div>
+);
 }
