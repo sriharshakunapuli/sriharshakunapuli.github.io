@@ -1,121 +1,192 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+export default function SriPortfolioWebsite() {
 
-function App() {
-  const [count, setCount] = useState(0)
+  const profile = {
+    name: "Sri Harsha Kunapuli",
+    title: "Senior Mobile Engineer",
+    subtitle: "Android • Flutter • IoT • AOSP",
+    summary:
+      "Senior Mobile Engineer with 12+ years of experience building large-scale mobile and IoT-connected applications, including 8+ years in Android and 4+ years in Flutter. Expertise in Jetpack Compose, Kotlin Coroutines, BLE, MQTT, WebSocket, AWS IoT, and scalable mobile architecture.",
+    email: "sriharshakunapuli@gmail.com",
+    phone: "(858) 281-8478",
+    location: "California, USA",
+    linkedin: "https://www.linkedin.com/in/sri-harsha-kunapuli-9a3945154/",
+    github: "https://github.com/sriharshakunapuli",
+    resume: "#",
+  };
+
+  const publishedApps = [
+
+    {
+      name: "Fluidra Pro",
+      platform: "Android / iOS",
+      description:
+        "Professional IoT mobile platform enabling service technicians to configure, monitor, and control connected pool equipment.",
+      android: "https://play.google.com/store/apps/details?id=com.zodiac.fluidrapro",
+      ios: "https://apps.apple.com/us/app/fluidra-pro/id1538621105"
+    },
+
+    {
+      name: "iAquaLink",
+      platform: "Android / iOS",
+      description:
+        "Consumer IoT application allowing pool owners to remotely monitor and control pool equipment and automation systems.",
+      android: "https://play.google.com/store/apps/details?id=com.zodiac.iaqualink",
+      ios: "https://apps.apple.com/us/app/iaqualink/id443059509"
+    },
+
+    {
+      name: "AT&T TV",
+      platform: "Android",
+      description:
+        "Large-scale streaming platform delivering live television, DVR playback, and on-demand video experiences.",
+      android: "https://play.google.com/store/apps/details?id=com.att.tv",
+    },
+
+    {
+      name: "DirecTV",
+      platform: "Android",
+      description:
+        "Mobile streaming and remote DVR management platform supporting millions of users across DirecTV services.",
+      android: "https://play.google.com/store/apps/details?id=com.directv.navigator",
+    },
+
+    {
+      name: "Best Brains Learning",
+      platform: "Android",
+      description:
+        "Educational mobile application enabling learning programs and progress tracking for students.",
+      android: "https://play.google.com/store/apps/details?id=com.edu.bestbrains",
+    },
+
+    {
+      name: "Media Review & Promotions",
+      platform: "Android",
+      description:
+        "Mobile review and rating platform enabling users to share feedback and discover local businesses.",
+      android: "https://play.google.com/store/apps/details?id=com.review.legend",
+    }
+
+  ];
+
+  const projects = [
+
+    {
+      name: "Jetpack Compose Modernization",
+      description:
+        "Incremental migration of large legacy Android codebases from XML layouts to Jetpack Compose using ComposeView interoperability and recomposition optimization.",
+      stack: "Kotlin • Jetpack Compose • Coroutines • Flow • MVVM",
+      link: "#",
+    },
+
+    {
+      name: "IoT Device Control Platform",
+      description:
+        "Mobile-first architecture enabling real-time control of connected devices using BLE, MQTT, WebSocket, and AWS IoT integrations.",
+      stack: "Android • Flutter • BLE • MQTT • AWS IoT • WebSocket",
+      link: "#",
+    },
+
+    {
+      name: "Flutter Scalable Architecture",
+      description:
+        "Reusable Flutter architecture implementing Clean Architecture, BLoC state management, CI/CD automation, and modular UI components.",
+      stack: "Flutter • Dart • BLoC • Provider • GitHub Actions • Fastlane",
+      link: "#",
+    },
+
+    {
+      name: "AOSP In-Vehicle Infotainment",
+      description:
+        "Android Automotive media platform integrating satellite radio, streaming services, and vehicle HAL/AIDL interfaces.",
+      stack: "Android • AOSP • AIDL • HAL • Kotlin",
+      link: "#",
+    }
+
+  ];
+
+  const skills = [
+    "Kotlin",
+    "Java",
+    "Jetpack Compose",
+    "Coroutines",
+    "Flow",
+    "Flutter / Dart",
+    "MVVM / MVP / MVC / Clean Architecture",
+    "BLoC / Provider",
+    "Dagger / Hilt",
+    "BLE",
+    "MQTT / WebSocket",
+    "AWS IoT",
+    "AOSP, AIDL / HAL",
+    "CI/CD: GitHub Actions / Jenkins / Fastlane",
+    "GitHub Copilot / Android Studio Gemini",
+    "JUnit, Mockito, Espresso, Appium, JaCoCo, LCOV"
+  ];
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div style={{fontFamily:"Arial", padding:"40px", maxWidth:"1100px", margin:"auto"}}>
 
-      <div className="ticks"></div>
+      <h1>{profile.name}</h1>
+      <h3>{profile.title} — {profile.subtitle}</h3>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <p>{profile.summary}</p>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      <h2>Profiles</h2>
+
+      <ul>
+        <li>
+          <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+        </li>
+        <li>
+          <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+        </li>
+      </ul>
+
+      <h2>Published Mobile Applications</h2>
+
+      <ul>
+        {publishedApps.map(app => (
+          <li key={app.name}>
+            <b>{app.name}</b> ({app.platform}) — {app.description}
+            <br/>
+            {app.android && (
+              <>
+                {" "}
+                <a href={app.android} target="_blank" rel="noreferrer">Android</a>
+              </>
+            )}
+
+            {app.ios && (
+              <>
+                {" | "}
+                <a href={app.ios} target="_blank" rel="noreferrer">iOS</a>
+              </>
+            )}
+          </li>
+        ))}
+      </ul>
+
+      <h2>Featured Engineering Projects</h2>
+
+      <ul>
+        {projects.map(project => (
+          <li key={project.name}>
+            <b>{project.name}</b> — {project.description}
+            <br/>
+            <i>{project.stack}</i>
+          </li>
+        ))}
+      </ul>
+
+      <h2>Core Skills</h2>
+
+      <p>{skills.join(" • ")}</p>
+
+      <h2>Contact</h2>
+
+      <p>Email: {profile.email}</p>
+      <p>Location: {profile.location}</p>
+
+    </div>
+  );
 }
-
-export default App
